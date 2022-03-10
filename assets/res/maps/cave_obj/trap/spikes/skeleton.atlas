@@ -1,0 +1,41 @@
+
+skeleton.png
+size: 197,76
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+spikes_trap1
+  rotate: false
+  xy: 2, 2
+  size: 71, 3
+  orig: 128, 128
+  offset: 29, 30
+  index: -1
+spikes_trap2
+  rotate: true
+  xy: 178, 3
+  size: 71, 17
+  orig: 128, 128
+  offset: 29, 30
+  index: -1
+spikes_trap3
+  rotate: true
+  xy: 140, 3
+  size: 71, 36
+  orig: 128, 128
+  offset: 29, 30
+  index: -1
+spikes_trap4
+  rotate: true
+  xy: 87, 2
+  size: 72, 51
+  orig: 128, 128
+  offset: 28, 30
+  index: -1
+spikes_trap5
+  rotate: false
+  xy: 2, 7
+  size: 83, 67
+  orig: 128, 128
+  offset: 23, 30
+  index: -1

@@ -1,0 +1,62 @@
+
+skeleton.png
+size: 30,180
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Mushroom_Chest_Open_01
+  rotate: false
+  xy: 2, 82
+  size: 26, 18
+  orig: 26, 18
+  offset: 0, 0
+  index: -1
+Mushroom_Chest_Open_02
+  rotate: false
+  xy: 2, 62
+  size: 26, 18
+  orig: 26, 18
+  offset: 0, 0
+  index: -1
+Mushroom_Chest_Open_03
+  rotate: false
+  xy: 2, 42
+  size: 26, 18
+  orig: 26, 18
+  offset: 0, 0
+  index: -1
+Mushroom_Chest_Open_04
+  rotate: false
+  xy: 2, 22
+  size: 26, 18
+  orig: 26, 18
+  offset: 0, 0
+  index: -1
+Mushroom_Chest_Open_05
+  rotate: false
+  xy: 2, 2
+  size: 26, 18
+  orig: 26, 18
+  offset: 0, 0
+  index: -1
+Mushroom_Chest_Open_06
+  rotate: false
+  xy: 2, 102
+  size: 26, 21
+  orig: 26, 21
+  offset: 0, 0
+  index: -1
+Mushroom_Chest_Open_07
+  rotate: false
+  xy: 2, 125
+  size: 26, 24
+  orig: 26, 24
+  offset: 0, 0
+  index: -1
+Mushroom_Chest_Open_08
+  rotate: false
+  xy: 2, 151
+  size: 26, 27
+  orig: 26, 27
+  offset: 0, 0
+  index: -1

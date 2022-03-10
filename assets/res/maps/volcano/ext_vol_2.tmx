@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.1.6" orientation="orthogonal" renderorder="right-down" width="30" height="12" tilewidth="32" tileheight="32" infinite="0" nextobjectid="29">
+ <tileset firstgid="1" source="food.tsx"/>
+ <tileset firstgid="9" source="grass.tsx"/>
+ <tileset firstgid="20" source="ladder.tsx"/>
+ <tileset firstgid="26" source="rock.tsx"/>
+ <tileset firstgid="30" source="threes.tsx"/>
+ <tileset firstgid="34" source="Tileset.tsx"/>
+ <layer name="env" width="30" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="floor" width="30" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,61,62,63,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,61,62,63,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,61,62,63,0,0,0,0,0,0,0,0,0,61,62,63,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,61,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,63,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="items" width="30" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,1,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,28,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup name="obj">
+  <object id="3" name="revivePoint" x="93.182" y="214.866" width="9.125" height="7.125">
+   <properties>
+    <property name="kind" value="revivePoint"/>
+    <property name="prefab" value="vol_revivepoint"/>
+   </properties>
+  </object>
+  <object id="16" name="trap_spikes" x="457.435" y="128.373" width="20.1596" height="16.8905">
+   <properties>
+    <property name="kind" value="trap"/>
+    <property name="prefab" value="spikes"/>
+   </properties>
+  </object>
+  <object id="19" name="key" x="600" y="39.6667">
+   <properties>
+    <property name="count" value="1"/>
+    <property name="kind" value="Key"/>
+    <property name="prefab" value="vol_mh_key"/>
+    <property name="target" value="TreasureBox"/>
+   </properties>
+  </object>
+  <object id="24" name="door" x="909.667" y="86.3333">
+   <properties>
+    <property name="kind" value="Door"/>
+    <property name="prefab" value="portal"/>
+    <property name="roll" value="100"/>
+    <property name="target" value="ext_vol3"/>
+   </properties>
+  </object>
+  <object id="25" name="trap_spikes" x="766.587" y="224.555" width="20.1596" height="16.8905">
+   <properties>
+    <property name="kind" value="trap"/>
+    <property name="prefab" value="spikes"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="born">
+  <object id="1" name="hero" x="69.7265" y="209.251" width="10.1457" height="9.7851">
+   <properties>
+    <property name="kind" value="hero"/>
+   </properties>
+  </object>
+  <object id="22" name="pinkbeholder" x="275.777" y="224.118" width="16.4456" height="11.0359">
+   <properties>
+    <property name="kind" value="mob"/>
+    <property name="mob" value="pinkbeholder"/>
+   </properties>
+  </object>
+  <object id="26" name="pinkbeholder" x="569.069" y="223.838" width="16.4456" height="11.0359">
+   <properties>
+    <property name="kind" value="mob"/>
+    <property name="mob" value="pinkbeholder"/>
+   </properties>
+  </object>
+  <object id="27" name="coin" x="719" y="155.5">
+   <properties>
+    <property name="id" value="10000101"/>
+    <property name="kind" value="coin"/>
+    <property name="len" type="int" value="80"/>
+    <property name="num" type="int" value="5"/>
+    <property name="px" type="int" value="0"/>
+    <property name="py" type="int" value="0"/>
+    <property name="rot" value="30"/>
+    <property name="shape" value="circle"/>
+   </properties>
+   <ellipse/>
+  </object>
+ </objectgroup>
+</map>

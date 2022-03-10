@@ -1,0 +1,69 @@
+
+skeleton.png
+size: 752,39
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+fire_trap1
+  rotate: false
+  xy: 736, 7
+  size: 14, 30
+  orig: 128, 128
+  offset: 0, 47
+  index: -1
+fire_trap2
+  rotate: false
+  xy: 705, 7
+  size: 29, 30
+  orig: 128, 128
+  offset: 0, 47
+  index: -1
+fire_trap3
+  rotate: false
+  xy: 649, 7
+  size: 54, 30
+  orig: 128, 128
+  offset: 0, 47
+  index: -1
+fire_trap4
+  rotate: false
+  xy: 578, 7
+  size: 69, 30
+  orig: 128, 128
+  offset: 0, 47
+  index: -1
+fire_trap5
+  rotate: false
+  xy: 485, 5
+  size: 91, 32
+  orig: 128, 128
+  offset: 0, 47
+  index: -1
+fire_trap6
+  rotate: false
+  xy: 379, 4
+  size: 104, 33
+  orig: 128, 128
+  offset: 0, 47
+  index: -1
+fire_trap7
+  rotate: false
+  xy: 257, 2
+  size: 120, 35
+  orig: 128, 128
+  offset: 0, 46
+  index: -1
+fire_trap8
+  rotate: false
+  xy: 131, 2
+  size: 124, 35
+  orig: 128, 128
+  offset: 0, 46
+  index: -1
+fire_trap9
+  rotate: false
+  xy: 2, 2
+  size: 127, 35
+  orig: 128, 128
+  offset: 0, 46
+  index: -1

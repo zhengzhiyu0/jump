@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.1.4" orientation="orthogonal" renderorder="right-down" width="30" height="12" tilewidth="32" tileheight="32" infinite="0" nextobjectid="286">
+ <tileset firstgid="1" source="TileSet.tsx"/>
+ <tileset firstgid="46" source="ladderSprites.tsx"/>
+ <tileset firstgid="62" source="spike.tsx"/>
+ <tileset firstgid="66" source="pointerslist.tsx"/>
+ <tileset firstgid="74" source="small_mush.tsx"/>
+ <tileset firstgid="82" name="boxlist" tilewidth="32" tileheight="32" tilecount="8" columns="8">
+  <image source="boxlist.png" width="256" height="32"/>
+  <tile id="0">
+   <properties>
+    <property name="kind" value="Box"/>
+    <property name="prefab" value="box1"/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="kind" value="Box"/>
+    <property name="prefab" value="box2"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="90" source="mushlist.tsx"/>
+ <tileset firstgid="96" source="foodsprites.tsx"/>
+ <layer name="env" width="30" height="12">
+  <data encoding="csv">
+11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,
+11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,
+11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,
+11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,
+11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,
+11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,
+11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,
+11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,
+11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,
+11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,
+11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,
+11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11
+</data>
+ </layer>
+ <layer name="floor" width="30" height="12">
+  <data encoding="csv">
+13,0,0,0,0,41,2,2,2,2,2,42,0,0,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,
+13,0,0,0,0,13,0,0,0,0,0,13,0,0,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,
+13,0,0,0,0,13,28,29,29,30,0,13,0,0,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,
+13,0,0,0,0,13,0,0,0,0,0,13,0,0,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,
+13,0,0,0,0,13,0,0,0,0,0,13,0,0,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,
+13,0,0,0,0,22,0,28,29,29,30,22,0,0,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,
+13,0,0,0,0,0,0,0,0,0,0,0,0,0,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,
+13,0,0,0,0,0,0,0,0,0,0,0,0,0,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,
+13,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,13,
+13,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,12,13,
+13,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,12,13,
+13,19,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,21,13
+</data>
+ </layer>
+ <layer name="items" width="30" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup name="obj">
+  <object id="278" name="revivePoint" x="48.2063" y="256.08">
+   <properties>
+    <property name="kind" value="revivePoint"/>
+    <property name="prefab" value="revivepoint"/>
+   </properties>
+  </object>
+  <object id="280" name="coin" x="239" y="141">
+   <properties>
+    <property name="id" value="10000101"/>
+    <property name="kind" value="coin"/>
+    <property name="num" type="int" value="4"/>
+    <property name="px" type="int" value="30"/>
+    <property name="py" type="int" value="0"/>
+    <property name="rot" value="0"/>
+    <property name="shape" value="line"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="281" name="coin" x="207" y="48">
+   <properties>
+    <property name="id" value="10000101"/>
+    <property name="kind" value="coin"/>
+    <property name="num" type="int" value="3"/>
+    <property name="px" type="int" value="30"/>
+    <property name="py" type="int" value="0"/>
+    <property name="rot" value="0"/>
+    <property name="shape" value="line"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="282" name="trap_spikes" x="288.17" y="64.3048" width="20.1596" height="16.8905">
+   <properties>
+    <property name="kind" value="trap"/>
+    <property name="prefab" value="spikes"/>
+   </properties>
+  </object>
+  <object id="283" name="trap_spikes" x="320.67" y="160.055" width="20.1596" height="16.8905">
+   <properties>
+    <property name="kind" value="trap"/>
+    <property name="prefab" value="spikes"/>
+   </properties>
+  </object>
+  <object id="285" name="door" x="418" y="230.171">
+   <properties>
+    <property name="kind" value="Door"/>
+    <property name="prefab" value="portal"/>
+    <property name="target" value=""/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="born">
+  <object id="219" name="hero" x="60.2256" y="155.982" width="10.1457" height="9.7851">
+   <properties>
+    <property name="kind" value="hero"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

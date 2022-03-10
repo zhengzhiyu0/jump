@@ -1,0 +1,419 @@
+
+skeleton.png
+size: 523,78
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Owlet_Monster_Attack1_4_01
+  rotate: false
+  xy: 125, 26
+  size: 21, 26
+  orig: 21, 26
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Attack1_4_02
+  rotate: false
+  xy: 242, 2
+  size: 21, 24
+  orig: 21, 24
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Attack1_4_03
+  rotate: false
+  xy: 2, 49
+  size: 27, 27
+  orig: 27, 27
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Attack1_4_04
+  rotate: true
+  xy: 245, 53
+  size: 23, 27
+  orig: 23, 27
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Climb_4_01
+  rotate: false
+  xy: 29, 18
+  size: 22, 29
+  orig: 22, 29
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Climb_4_02
+  rotate: true
+  xy: 60, 54
+  size: 22, 29
+  orig: 22, 29
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Climb_4_03
+  rotate: true
+  xy: 91, 54
+  size: 22, 29
+  orig: 22, 29
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Climb_4_04
+  rotate: true
+  xy: 122, 54
+  size: 22, 29
+  orig: 22, 29
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Death_8_01
+  rotate: true
+  xy: 153, 54
+  size: 22, 28
+  orig: 22, 28
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Death_8_02
+  rotate: false
+  xy: 2, 18
+  size: 25, 29
+  orig: 25, 29
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Death_8_03
+  rotate: true
+  xy: 171, 26
+  size: 26, 19
+  orig: 26, 19
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Death_8_04
+  rotate: false
+  xy: 2, 5
+  size: 29, 11
+  orig: 29, 11
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Death_8_06
+  rotate: true
+  xy: 506, 59
+  size: 17, 12
+  orig: 17, 12
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Death_8_09
+  rotate: true
+  xy: 184, 10
+  size: 14, 6
+  orig: 14, 6
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Death_8_10
+  rotate: false
+  xy: 514, 51
+  size: 7, 6
+  orig: 7, 6
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Hurt_4_01
+  rotate: false
+  xy: 148, 26
+  size: 21, 26
+  orig: 21, 26
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Hurt_4_02
+  rotate: true
+  xy: 215, 55
+  size: 21, 28
+  orig: 21, 28
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Hurt_4_03
+  rotate: true
+  xy: 390, 55
+  size: 21, 27
+  orig: 21, 27
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Hurt_4_04
+  rotate: true
+  xy: 156, 3
+  size: 21, 26
+  orig: 21, 26
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Idle_4_01
+  rotate: false
+  xy: 192, 28
+  size: 21, 26
+  orig: 21, 26
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Idle_4_02
+  rotate: false
+  xy: 53, 20
+  size: 20, 27
+  orig: 20, 27
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Idle_4_03
+  rotate: true
+  xy: 419, 55
+  size: 21, 27
+  orig: 21, 27
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Idle_4_04
+  rotate: true
+  xy: 75, 2
+  size: 22, 26
+  orig: 22, 26
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Jump_8_01
+  rotate: true
+  xy: 267, 30
+  size: 21, 26
+  orig: 21, 26
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Jump_8_02
+  rotate: true
+  xy: 130, 2
+  size: 22, 24
+  orig: 22, 24
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Jump_8_03
+  rotate: false
+  xy: 192, 2
+  size: 23, 24
+  orig: 23, 24
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Jump_8_04
+  rotate: true
+  xy: 183, 56
+  size: 20, 30
+  orig: 20, 30
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Jump_8_05
+  rotate: true
+  xy: 448, 55
+  size: 21, 27
+  orig: 21, 27
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Jump_8_06
+  rotate: true
+  xy: 303, 54
+  size: 22, 27
+  orig: 22, 27
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Jump_8_07
+  rotate: false
+  xy: 217, 2
+  size: 23, 24
+  orig: 23, 24
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Jump_8_08
+  rotate: false
+  xy: 424, 27
+  size: 20, 26
+  orig: 20, 26
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Push_6_01
+  rotate: false
+  xy: 215, 28
+  size: 23, 25
+  orig: 23, 25
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Push_6_02
+  rotate: false
+  xy: 75, 26
+  size: 23, 26
+  orig: 23, 26
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Push_6_03
+  rotate: true
+  xy: 332, 54
+  size: 22, 27
+  orig: 22, 27
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Push_6_04
+  rotate: true
+  xy: 240, 28
+  size: 23, 25
+  orig: 23, 25
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Push_6_05
+  rotate: false
+  xy: 100, 26
+  size: 23, 26
+  orig: 23, 26
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Push_6_06
+  rotate: true
+  xy: 361, 54
+  size: 22, 27
+  orig: 22, 27
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Run_6_01
+  rotate: false
+  xy: 492, 28
+  size: 20, 25
+  orig: 20, 25
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Run_6_02
+  rotate: true
+  xy: 295, 30
+  size: 21, 25
+  orig: 21, 25
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Run_6_03
+  rotate: false
+  xy: 265, 2
+  size: 21, 24
+  orig: 21, 24
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Run_6_04
+  rotate: true
+  xy: 407, 4
+  size: 20, 25
+  orig: 20, 25
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Run_6_05
+  rotate: true
+  xy: 380, 2
+  size: 21, 25
+  orig: 21, 25
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Run_6_06
+  rotate: false
+  xy: 446, 2
+  size: 21, 24
+  orig: 21, 24
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Throw_4_01
+  rotate: false
+  xy: 288, 2
+  size: 21, 26
+  orig: 21, 26
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Throw_4_02
+  rotate: true
+  xy: 103, 2
+  size: 22, 25
+  orig: 22, 25
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Throw_4_03
+  rotate: true
+  xy: 322, 32
+  size: 20, 27
+  orig: 20, 27
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Throw_4_04
+  rotate: true
+  xy: 477, 55
+  size: 21, 27
+  orig: 21, 27
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Walk_6_01
+  rotate: false
+  xy: 446, 28
+  size: 21, 25
+  orig: 21, 25
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Walk_6_02
+  rotate: false
+  xy: 311, 2
+  size: 21, 26
+  orig: 21, 26
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Walk_6_03
+  rotate: true
+  xy: 351, 32
+  size: 20, 27
+  orig: 20, 27
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Walk_6_04
+  rotate: false
+  xy: 469, 28
+  size: 21, 25
+  orig: 21, 25
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Walk_6_05
+  rotate: false
+  xy: 334, 4
+  size: 21, 26
+  orig: 21, 26
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Walk_6_06
+  rotate: false
+  xy: 380, 25
+  size: 20, 27
+  orig: 20, 27
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Walk_Attack_6_01
+  rotate: true
+  xy: 469, 5
+  size: 21, 25
+  orig: 21, 25
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Walk_Attack_6_02
+  rotate: false
+  xy: 31, 49
+  size: 27, 27
+  orig: 27, 27
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Walk_Attack_6_03
+  rotate: true
+  xy: 274, 53
+  size: 23, 27
+  orig: 23, 27
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Walk_Attack_6_04
+  rotate: true
+  xy: 496, 5
+  size: 21, 25
+  orig: 21, 25
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Walk_Attack_6_05
+  rotate: false
+  xy: 357, 4
+  size: 21, 26
+  orig: 21, 26
+  offset: 0, 0
+  index: -1
+Owlet_Monster_Walk_Attack_6_06
+  rotate: false
+  xy: 402, 26
+  size: 20, 27
+  orig: 20, 27
+  offset: 0, 0
+  index: -1

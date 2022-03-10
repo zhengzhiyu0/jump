@@ -1,0 +1,90 @@
+
+skeleton.png
+size: 146,16
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Golden_Key_01
+  rotate: false
+  xy: 2, 2
+  size: 16, 8
+  orig: 16, 8
+  offset: 0, 0
+  index: -1
+Golden_Key_02
+  rotate: false
+  xy: 38, 2
+  size: 12, 8
+  orig: 12, 8
+  offset: 0, 0
+  index: -1
+Golden_Key_03
+  rotate: false
+  xy: 94, 2
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+Golden_Key_04
+  rotate: false
+  xy: 134, 2
+  size: 4, 8
+  orig: 4, 8
+  offset: 0, 0
+  index: -1
+Golden_Key_05
+  rotate: false
+  xy: 104, 2
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+Golden_Key_06
+  rotate: false
+  xy: 52, 2
+  size: 12, 8
+  orig: 12, 8
+  offset: 0, 0
+  index: -1
+Golden_Key_07
+  rotate: false
+  xy: 20, 2
+  size: 16, 8
+  orig: 16, 8
+  offset: 0, 0
+  index: -1
+Golden_Key_08
+  rotate: false
+  xy: 66, 2
+  size: 12, 8
+  orig: 12, 8
+  offset: 0, 0
+  index: -1
+Golden_Key_09
+  rotate: false
+  xy: 114, 2
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+Golden_Key_10
+  rotate: false
+  xy: 140, 2
+  size: 4, 8
+  orig: 4, 8
+  offset: 0, 0
+  index: -1
+Golden_Key_11
+  rotate: false
+  xy: 124, 2
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+Golden_Key_12
+  rotate: false
+  xy: 80, 2
+  size: 12, 8
+  orig: 12, 8
+  offset: 0, 0
+  index: -1

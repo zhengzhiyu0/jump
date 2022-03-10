@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.1.6" orientation="orthogonal" renderorder="right-down" width="20" height="12" tilewidth="32" tileheight="32" infinite="0" nextobjectid="50">
+ <tileset firstgid="1" source="food.tsx"/>
+ <tileset firstgid="9" source="grass.tsx"/>
+ <tileset firstgid="20" source="ladder.tsx"/>
+ <tileset firstgid="26" source="rock.tsx"/>
+ <tileset firstgid="30" source="threes.tsx"/>
+ <tileset firstgid="34" source="Tileset.tsx"/>
+ <layer name="env" width="20" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,31,0,0,0,31,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,0,
+0,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,0,
+0,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,0
+</data>
+ </layer>
+ <layer name="floor" width="20" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,61,62,62,62,63,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+34,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,36,
+43,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45,
+43,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45,
+43,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45
+</data>
+ </layer>
+ <layer name="items" width="20" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,61,0,0,25,62,63,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,21,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,21,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,21,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,21,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,23,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup name="obj">
+  <object id="3" name="revivePoint" x="78.33" y="256.053" width="9.125" height="7.125">
+   <properties>
+    <property name="kind" value="revivePoint"/>
+    <property name="prefab" value="vol_revivepoint"/>
+   </properties>
+  </object>
+  <object id="47" name="chest" x="428.542" y="64.1212">
+   <properties>
+    <property name="items" value="[[&quot;10000101&quot;,67,[9,17]],[&quot;10000102&quot;,20,[5,7]],[&quot;10000002&quot;,13],[&quot;10001002&quot;,5]]"/>
+    <property name="keyCount" type="int" value="3"/>
+    <property name="kind" value="TreasureBox"/>
+    <property name="prefab" value="vol_mh_chest"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="48" name="ladder" x="464.144" y="64.1818">
+   <properties>
+    <property name="kind" value="ladder"/>
+    <property name="prefab" value="trigger_ladder_down"/>
+   </properties>
+  </object>
+  <object id="49" name="finishFlag" x="588" y="255.909">
+   <properties>
+    <property name="kind" value="finishFlag"/>
+    <property name="prefab" value="finish"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="born">
+  <object id="1" name="hero" x="122.438" y="239.666" width="10.1457" height="9.7851">
+   <properties>
+    <property name="kind" value="hero"/>
+   </properties>
+  </object>
+  <object id="33" name="skeleton" x="341.444" y="256.088" width="16.4456" height="11.0359">
+   <properties>
+    <property name="kind" value="mob"/>
+    <property name="mob" value="skeleton"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

@@ -1,0 +1,48 @@
+
+skeleton.png
+size: 130,68
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Flag_01
+  rotate: false
+  xy: 2, 2
+  size: 30, 64
+  orig: 30, 64
+  offset: 0, 0
+  index: -1
+Flag_05
+  rotate: false
+  xy: 2, 2
+  size: 30, 64
+  orig: 30, 64
+  offset: 0, 0
+  index: -1
+Flag_02
+  rotate: false
+  xy: 34, 2
+  size: 30, 64
+  orig: 30, 64
+  offset: 0, 0
+  index: -1
+Flag_04
+  rotate: false
+  xy: 34, 2
+  size: 30, 64
+  orig: 30, 64
+  offset: 0, 0
+  index: -1
+Flag_03
+  rotate: false
+  xy: 66, 2
+  size: 30, 64
+  orig: 30, 64
+  offset: 0, 0
+  index: -1
+Flag_06
+  rotate: false
+  xy: 98, 2
+  size: 30, 64
+  orig: 30, 64
+  offset: 0, 0
+  index: -1
