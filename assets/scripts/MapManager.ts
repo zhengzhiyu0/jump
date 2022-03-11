@@ -1,12 +1,22 @@
+import ResHelp from "./tool/ResHelp";
+
 const { ccclass, property } = cc._decorator;
+const Res = ResHelp.instance;
 
 @ccclass
 export default class MapManager extends cc.Component {
 
     // onLoad () {}
+    private mapNode: cc.Node = null;
+    private floorLayer: cc.TiledLayer = null;
+
+    @property(cc.Node)
+    gameObj: cc.Node = null;
+
+    @property(cc.Node)
+    t:cc.Node = null
 
     protected start() {
-
     }
 
     public initMap() {
@@ -16,6 +26,7 @@ export default class MapManager extends cc.Component {
             cc.error("no mapNode");
             return;
         }
+        this.mapNode = mapNode;
         let tiledMap = mapNode.getComponent(cc.TiledMap);
         let tiledSize = tiledMap.getTileSize();
         // console.log("tiledSize", tiledSize)
@@ -33,6 +44,7 @@ export default class MapManager extends cc.Component {
 
     setFloor(tiledMap: cc.TiledMap, tiledSize: cc.Size) {
         let layer = tiledMap.getLayer("floor");
+        this.floorLayer = layer;
         let layerSize = layer.getLayerSize();
         for (let i = 0; i < layerSize.width; i++) {
             for (let j = 0; j < layerSize.height; j++) {
@@ -64,6 +76,7 @@ export default class MapManager extends cc.Component {
 
     setItems(tiledMap: cc.TiledMap) {
         let layer = tiledMap.getLayer("items");
+
         let size = layer.getLayerSize();
         let width = size.width;
         let height = size.height;
@@ -74,10 +87,29 @@ export default class MapManager extends cc.Component {
                 let properties = tiledMap.getPropertiesForGID(curGId);
                 let size = tiledMap.getTileSize();
                 if (properties) {
-                    console.log("properties___", properties)
+
+                    // console.log("properties___", properties)
                     let prefabName = properties.prefab;
 
                     if (properties.kind === "Food") {
+                        continue;
+                    }
+                    if (properties.kind === "dy_wall") {
+                        let worldPos = this.tilePos2PixelPos(raw, col);
+                        console.log("worldPos",worldPos)
+                        let location = this.gameObj.convertToNodeSpaceAR(worldPos);
+                        console.log("location",location)
+
+                        let node = cc.instantiate(this.t)
+                        node.parent = this.gameObj;
+                        node.x = location.x;
+                        node.y = location.y
+
+                        // Res.getPrefab("mo_" + "dy_wall").then(res => {
+                        //     let node = cc.instantiate(res);
+                        //     this.gameObj.addChild(node);
+                        //     node.setPosition(location);
+                        // })
                         continue;
                     }
                     if (prefabName) {
@@ -88,6 +120,15 @@ export default class MapManager extends cc.Component {
         }
 
         layer.node.active = false;
+    }
+
+
+    private tilePos2PixelPos(raw, col) {
+        let pixelPos = this.floorLayer.getPositionAt(raw, col);
+
+        let p2 = this.mapNode.convertToWorldSpaceAR(pixelPos);
+
+        return p2;
     }
 
     // update (dt) {}

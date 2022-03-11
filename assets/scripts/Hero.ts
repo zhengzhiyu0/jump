@@ -76,7 +76,7 @@ export default class Hero extends cc.Component {
             this.scheduleOnce(() => {
                 this.canJump = false;
                 console.log(lv.y)
-            }, 0.14)
+            }, 0.15)
             this.scheduleOnce(() => {
                 this._rigidBody.gravityScale = 60;
             }, 0.5)
