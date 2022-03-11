@@ -39,7 +39,6 @@ export default class MapManager extends cc.Component {
             for (let j = 0; j < layerSize.height; j++) {
                 let tiled = layer.getTiledTileAt(i, j, true);
                 if (tiled.gid != 0) {
-                    tiled.node.group = "wall";
 
                     let curGId = layer.getTileGIDAt(i, j);
                     let properties = tiledMap.getPropertiesForGID(curGId);
@@ -49,7 +48,7 @@ export default class MapManager extends cc.Component {
                         tempNode.parent = tiled.node.parent;
                         tempNode.position = tiled.node.position;
                         tempNode.scale = tiled.node.scale;
-
+                        tempNode.group = "floor";
 
                         let body = tempNode.addComponent(cc.RigidBody);
                         body.type = cc.RigidBodyType.Static;

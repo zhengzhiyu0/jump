@@ -1,10 +1,22 @@
 {
   "group-list": [
-    "default"
+    "default",
+    "hero_foot",
+    "floor"
   ],
   "collision-matrix": [
     [
       true
+    ],
+    [
+      false,
+      false,
+      true
+    ],
+    [
+      false,
+      true,
+      false
     ]
   ],
   "excluded-modules": [
