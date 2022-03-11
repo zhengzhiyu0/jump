@@ -5,36 +5,35 @@ export default class MapManager extends cc.Component {
 
     // onLoad () {}
 
-    @property
-    stageScale: number = 0;
-
     protected start() {
 
     }
 
     public initMap() {
-        let stage = this.node.children[0];
-        if (!stage) {
-            cc.error("no stage");
+        //初始化地图大小
+        let mapNode = this.node.children[0];
+        if (!mapNode) {
+            cc.error("no mapNode");
             return;
         }
-
-        stage.scale = this.stageScale;
-
+        let tiledMap = mapNode.getComponent(cc.TiledMap);
+        let tiledSize = tiledMap.getTileSize();
+        // console.log("tiledSize", tiledSize)
         let canvas = cc.find("Canvas");
         let x = -canvas.position.x;
         let y = -canvas.position.y;
-        stage.setAnchorPoint(0, 0);
-        stage.setPosition(x, y);
+        mapNode.scaleX = 64 / tiledSize.width;
+        mapNode.scaleY = 64 / tiledSize.height;
+        mapNode.setAnchorPoint(0, 0);
+        mapNode.setPosition(x, y);
 
+        this.setFloor(tiledMap, tiledSize);
+        this.setItems(tiledMap);
+    }
 
-        let tiledMap = stage.getComponent(cc.TiledMap);
-        let tiledSize = tiledMap.getTileSize();
-        console.log("tiledSize", tiledSize)
+    setFloor(tiledMap: cc.TiledMap, tiledSize: cc.Size) {
         let layer = tiledMap.getLayer("floor");
         let layerSize = layer.getLayerSize();
-
-
         for (let i = 0; i < layerSize.width; i++) {
             for (let j = 0; j < layerSize.height; j++) {
                 let tiled = layer.getTiledTileAt(i, j, true);
@@ -59,9 +58,36 @@ export default class MapManager extends cc.Component {
                     }
 
                 }
-
             }
         }
+    }
+
+    setItems(tiledMap: cc.TiledMap) {
+        let layer = tiledMap.getLayer("items");
+        let size = layer.getLayerSize();
+        let width = size.width;
+        let height = size.height;
+
+        for (let col = 0; col < height; col++) {
+            for (let raw = 0; raw < width; raw++) {
+                let curGId = layer.getTileGIDAt(raw, col);
+                let properties = tiledMap.getPropertiesForGID(curGId);
+                let size = tiledMap.getTileSize();
+                if (properties) {
+                    console.log("properties___", properties)
+                    let prefabName = properties.prefab;
+
+                    if (properties.kind === "Food") {
+                        continue;
+                    }
+                    if (prefabName) {
+
+                    }
+                }
+            }
+        }
+
+        layer.node.active = false;
     }
 
     // update (dt) {}
