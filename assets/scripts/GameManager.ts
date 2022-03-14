@@ -1,3 +1,4 @@
+import CameraManager from "./CameraManager";
 import MapManager from "./MapManager";
 
 const { ccclass, property } = cc._decorator;
@@ -7,6 +8,9 @@ export default class GameManager extends cc.Component {
 
     @property(MapManager)
     mapManager: MapManager = null;
+
+    @property(CameraManager)
+    cameraManager: CameraManager = null;
 
     onLoad() {
         cc.director.getCollisionManager().enabled = true;
@@ -21,8 +25,9 @@ export default class GameManager extends cc.Component {
         cc.director.getPhysicsManager().gravity = cc.v2(0, -600);
     }
 
-    protected start() {
-        this.mapManager.initMap();
+    protected async start() {
+        let mapNode = await this.mapManager.initMap(1);
+        this.cameraManager.initCamera(mapNode);
     }
 
     // update (dt) {}

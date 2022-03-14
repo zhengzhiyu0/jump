@@ -1,3 +1,4 @@
+import { MapConfig } from "./config/MapConfig";
 import ResHelp from "./tool/ResHelp";
 
 const { ccclass, property } = cc._decorator;
@@ -16,9 +17,15 @@ export default class MapManager extends cc.Component {
     protected start() {
     }
 
-    public initMap() {
+    public async initMap(mapId: number) {
+        this.node.removeAllChildren();
+        let config = MapConfig["map" + mapId];
+
+        let mapPrefab = await Res.getPrefab("maps/" + config.prefab);
+
         //初始化地图大小
-        let mapNode = this.node.children[0];
+        let mapNode = cc.instantiate(mapPrefab)
+        this.node.addChild(mapNode);
         if (!mapNode) {
             cc.error("no mapNode");
             return;
@@ -37,6 +44,8 @@ export default class MapManager extends cc.Component {
 
         this.setFloor(tiledMap, tiledSize);
         this.setItems(tiledMap);
+
+        return mapNode;
     }
 
     setFloor(tiledMap: cc.TiledMap, tiledSize: cc.Size) {
@@ -92,7 +101,7 @@ export default class MapManager extends cc.Component {
                         let location = this.gameObj.convertToNodeSpaceAR(worldPos);
                         // console.log("location",location)
 
-                        Res.getPrefab("mo_" + prefabName).then(res => {
+                        Res.getPrefab("items/mo_" + prefabName).then(res => {
                             let node = cc.instantiate(res);
                             this.gameObj.addChild(node);
                             node.setPosition(location);
