@@ -13,9 +13,6 @@ export default class MapManager extends cc.Component {
     @property(cc.Node)
     gameObj: cc.Node = null;
 
-    @property(cc.Node)
-    t:cc.Node = null
-
     protected start() {
     }
 
@@ -87,33 +84,29 @@ export default class MapManager extends cc.Component {
                 let properties = tiledMap.getPropertiesForGID(curGId);
                 let size = tiledMap.getTileSize();
                 if (properties) {
-
                     // console.log("properties___", properties)
                     let prefabName = properties.prefab;
-
-                    if (properties.kind === "Food") {
-                        continue;
-                    }
-                    if (properties.kind === "dy_wall") {
-                        let worldPos = this.tilePos2PixelPos(raw, col);
-                        console.log("worldPos",worldPos)
-                        let location = this.gameObj.convertToNodeSpaceAR(worldPos);
-                        console.log("location",location)
-
-                        let node = cc.instantiate(this.t)
-                        node.parent = this.gameObj;
-                        node.x = location.x;
-                        node.y = location.y
-
-                        // Res.getPrefab("mo_" + "dy_wall").then(res => {
-                        //     let node = cc.instantiate(res);
-                        //     this.gameObj.addChild(node);
-                        //     node.setPosition(location);
-                        // })
-                        continue;
-                    }
                     if (prefabName) {
+                        let worldPos = this.tilePos2PixelPos(raw, col);
+                        // console.log("worldPos",worldPos)
+                        let location = this.gameObj.convertToNodeSpaceAR(worldPos);
+                        // console.log("location",location)
 
+                        Res.getPrefab("mo_" + prefabName).then(res => {
+                            let node = cc.instantiate(res);
+                            this.gameObj.addChild(node);
+                            node.setPosition(location);
+
+                            if (properties.kind === "Food") {
+
+                            } else if (properties.kind === "dy_wall") {
+                                let type = properties.type;
+                                if (type && node) {
+                                    node.getChildByName(type + "").active = true;
+                                    node["type"] = type;
+                                }
+                            }
+                        })
                     }
                 }
             }

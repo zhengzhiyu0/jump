@@ -68,6 +68,7 @@ export default class Hero extends cc.Component {
         if (Input.is_action_just_pressed(cc.macro.KEY.k) && this.canJump) {
             lv.y = this.jumpHeight;
             this.canJump = false;
+            this._animatorMain.autoTrigger("jump");
         }
 
         this._rigidBody.linearVelocity = lv;
