@@ -18,7 +18,7 @@ export default class GameManager extends cc.Component {
         cc.PhysicsManager.DrawBits.e_shapeBit
         ;
 
-        // cc.director.getPhysicsManager().gravity = cc.v2(0, -600);
+        cc.director.getPhysicsManager().gravity = cc.v2(0, -600);
     }
 
     protected start() {

@@ -11,7 +11,11 @@ export default class Hero extends cc.Component {
 
     @property
     public speed: number = 200;
-    private _tempV2: cc.Vec2 = cc.v2(0, 0);
+
+    @property
+    public jumpHeight: number = 300;
+
+    private _tempV2: cc.Vec2 = cc.v2();
     private _state = {
         stand: 1,
         attack: 2
@@ -61,27 +65,9 @@ export default class Hero extends cc.Component {
         this._animatorMain.setNumber('speed', Math.abs(this._tempV2.x));
 
 
-        if (Input.is_action_pressed(cc.macro.KEY.k)) {
-            this._tempV2.y = 1;
-        } else {
-            this._tempV2.y = 0;
-        }
-
-        if (this._tempV2.y && this.canJump) {
-            this._rigidBody.gravityScale = 1;
-            this._animatorMain.autoTrigger('jump');
-            lv.y += this.speed;
-            // this.canJump = false;
-
-            this.scheduleOnce(() => {
-                this.canJump = false;
-                console.log(lv.y)
-            }, 0.15)
-            this.scheduleOnce(() => {
-                this._rigidBody.gravityScale = 60;
-            }, 0.5)
-        } else {
-            lv.y = 0;
+        if (Input.is_action_just_pressed(cc.macro.KEY.k) && this.canJump) {
+            lv.y = this.jumpHeight;
+            this.canJump = false;
         }
 
         this._rigidBody.linearVelocity = lv;
