@@ -1,3 +1,4 @@
+import Prop from "./component/Prop";
 import { MapConfig } from "./config/MapConfig";
 import { PropsConfig } from "./config/PropsConfig";
 import ResHelp from "./tool/ResHelp";
@@ -142,7 +143,7 @@ export default class MapManager extends cc.Component {
 
     private setCoin() {
         const objs = this.getMapObjectInfo(this.mapNode, "obj", "kind", "coin");
-        console.log(objs);
+        // console.log(objs);
         objs.forEach(point => {
             let id = point.id;
             let config = PropsConfig[id];
@@ -200,9 +201,10 @@ export default class MapManager extends cc.Component {
         let config = obj.config;
         let stinger = obj.stinger;
         let isLoadMirror = obj.isLoadMirror;
-        let node;
+        let node: cc.Node = null;
         if (config.icon === "coin") {
             node = cc.instantiate(await Res.getPrefab("obj/coin"));
+            node.getComponent(Prop).setData(config);
         } else {
             // node = toy.pools.get("mo_dropItem");
             // let iconNode = cc.find("icon", node);
