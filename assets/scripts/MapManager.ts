@@ -21,10 +21,13 @@ export default class MapManager extends cc.Component {
         this.node.removeAllChildren();
         let config = MapConfig["map" + mapId];
 
+        let bgPrefab = await Res.getPrefab("bg/" + config.bg);
         let mapPrefab = await Res.getPrefab("maps/" + config.prefab);
 
         //初始化地图大小
+        let bgNode = cc.instantiate(bgPrefab);
         let mapNode = cc.instantiate(mapPrefab)
+        this.node.addChild(bgNode);
         this.node.addChild(mapNode);
         if (!mapNode) {
             cc.error("no mapNode");
@@ -34,6 +37,7 @@ export default class MapManager extends cc.Component {
         let tiledMap = mapNode.getComponent(cc.TiledMap);
         let tiledSize = tiledMap.getTileSize();
         // console.log("tiledSize", tiledSize)
+
         let canvas = cc.find("Canvas");
         let x = -canvas.position.x;
         let y = -canvas.position.y;
@@ -41,6 +45,14 @@ export default class MapManager extends cc.Component {
         mapNode.scaleY = 64 / tiledSize.height;
         mapNode.setAnchorPoint(0, 0);
         mapNode.setPosition(x, y);
+
+        let mapRealWidth = mapNode.scaleX * mapNode.width;
+        let mapRealHeight = mapNode.scaleY * mapNode.height;
+        bgNode.getComponent(cc.Sprite).type = cc.Sprite.Type.TILED;
+        console.log(mapRealHeight)
+        bgNode.width = mapRealWidth;
+        // bgNode.height = mapRealHeight;
+        bgNode.scaleY = mapRealHeight /  bgNode.height;
 
         this.setFloor(tiledMap, tiledSize);
         this.setItems(tiledMap);
