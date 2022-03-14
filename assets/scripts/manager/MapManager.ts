@@ -12,6 +12,7 @@ export default class MapManager extends cc.Component {
     // onLoad () {}
     private mapNode: cc.Node = null;
     private floorLayer: cc.TiledLayer = null;
+    private floorData: cc.Vec2[] = [];
 
     @property(cc.Node)
     gameObj: cc.Node = null;
@@ -20,6 +21,7 @@ export default class MapManager extends cc.Component {
     }
 
     public async initMap(mapId: number) {
+        this.floorData = [];
         this.node.removeAllChildren();
         let config = MapConfig["map" + mapId];
 
@@ -76,7 +78,10 @@ export default class MapManager extends cc.Component {
                     let properties = tiledMap.getPropertiesForGID(curGId);
 
                     if (properties && properties.isCollide) {
+                        let v2 = cc.v2(i, j);
                         let tempNode = new cc.Node();
+                        tempNode["mapPos"] = v2;
+                        this.floorData.push(v2);
                         tempNode.parent = tiled.node.parent;
                         tempNode.position = tiled.node.position;
                         tempNode.scale = tiled.node.scale;
@@ -287,6 +292,17 @@ export default class MapManager extends cc.Component {
             (-canvas.position.x) + localPointOffset.x * this.mapNode.scaleX,//瓦片地图160（32）
             canvas.position.y - localPointOffset.y * this.mapNode.scaleY//瓦片地图160（32）
         );
+    }
+
+    public isFloor(v2: cc.Vec2) {
+        for (let i = 0; i < this.floorData.length; i++) {
+            const element = this.floorData[i];
+            let _is = element.equals(v2);
+            if (_is) {
+                return _is;
+            };
+        }
+        return false;
     }
 
     // update (dt) {}
