@@ -1,7 +1,7 @@
-import Prop from "./component/Prop";
-import { MapConfig } from "./config/MapConfig";
-import { PropsConfig } from "./config/PropsConfig";
-import ResHelp from "./tool/ResHelp";
+import Prop from "../component/Prop";
+import { MapConfig } from "../config/MapConfig";
+import { PropsConfig } from "../config/PropsConfig";
+import ResHelp from "../tool/ResHelp";
 
 const { ccclass, property } = cc._decorator;
 const Res = ResHelp.instance;

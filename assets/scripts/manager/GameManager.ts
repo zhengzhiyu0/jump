@@ -1,20 +1,10 @@
-import CameraManager from "./CameraManager";
-import MapManager from "./MapManager";
-import ResHelp from "./tool/ResHelp";
+import GameMain from "../GameMain";
+import ResHelp from "../tool/ResHelp";
 
 const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default class GameManager extends cc.Component {
-
-    @property(MapManager)
-    mapManager: MapManager = null;
-
-    @property(CameraManager)
-    cameraManager: CameraManager = null;
-
-    public static _mapManager: MapManager = null;
-    public static _cameraManager: CameraManager = null;
 
     onLoad() {
         cc.director.getCollisionManager().enabled = true;
@@ -30,24 +20,19 @@ export default class GameManager extends cc.Component {
     }
 
     protected async start() {
-        GameManager._mapManager = this.mapManager;
-        GameManager._cameraManager = this.cameraManager;
-
         //地图
-        let mapNode = await this.mapManager.initMap(1);
+        let mapNode = await GameMain._mapManager.initMap(1);
 
         //英雄
-        const curPointInfo = this.mapManager.getOneMapObjectInfo(mapNode, "born", "kind", "hero");
-        console.log("curPointInfo", curPointInfo)
-        let pos = this.mapManager.getPosInMapObject(curPointInfo);
-        console.log("pos", pos)
+        const curPointInfo = GameMain._mapManager.getOneMapObjectInfo(mapNode, "born", "kind", "hero");
+        let pos = GameMain._mapManager.getPosInMapObject(curPointInfo);
         let heroPrefab = await ResHelp.instance.getPrefab("hero/m_hero1")
         let hero = cc.instantiate(heroPrefab);
-        this.node.addChild(hero);
+        GameMain.root.addChild(hero);
         hero.position = cc.v3(pos);
 
         //相机
-        this.cameraManager.initCamera(mapNode, hero);
+        GameMain._cameraManager.initCamera(mapNode, hero);
     }
 
     // update (dt) {}
