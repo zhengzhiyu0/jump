@@ -1,4 +1,5 @@
 import { MapConfig } from "./config/MapConfig";
+import { PropsConfig } from "./config/PropsConfig";
 import ResHelp from "./tool/ResHelp";
 
 const { ccclass, property } = cc._decorator;
@@ -56,6 +57,7 @@ export default class MapManager extends cc.Component {
 
         this.setFloor(tiledMap, tiledSize);
         this.setItems(tiledMap);
+        this.setCoin();
 
         return mapNode;
     }
@@ -138,6 +140,99 @@ export default class MapManager extends cc.Component {
         layer.node.active = false;
     }
 
+    private setCoin() {
+        const objs = this.getMapObjectInfo(this.mapNode, "obj", "kind", "coin");
+        console.log(objs);
+        objs.forEach(point => {
+            let id = point.id;
+            let config = PropsConfig[id];
+            if (!config) {
+                return;
+            }
+            const pos = this.getPosInMapObject(point);
+
+            let num = point.num;
+            let price = point.price;
+            let stinger = point.stinger;
+            switch (point.shape) {
+                case "circle":
+                    let startPos = pos.clone();
+                    if (num) {
+                        for (let i = 1; i <= num; i++) {
+                            let angle = cc.misc.degreesToRadians(point.rot * i);
+                            let nextX = point.len * Math.cos(angle) + startPos.x;
+                            let nextY = point.len * Math.sin(angle) + startPos.y;
+                            this.spawnDropProp({
+                                config,
+                                pos: cc.v2(nextX, nextY),
+                                num: 1,
+                                price,
+                                stinger
+                            })
+                        }
+                    }
+                    break;
+                case "line":
+                    if (num) {
+                        let startPos = pos.clone();
+                        for (let i = 1; i <= num; i++) {
+                            if (i >= 2) {
+                                startPos = startPos.add(cc.v2(point.px, point.py));
+                            }
+                            this.spawnDropProp({
+                                config,
+                                pos: startPos,
+                                num: 1,
+                                price,
+                                stinger
+                            })
+                        }
+                    }
+                    break;
+            }
+        })
+    }
+
+    private async spawnDropProp(obj) {
+        let pos = obj.pos;
+        let currentPos = obj.currentPos || null;
+        let num = obj.num;
+        let config = obj.config;
+        let stinger = obj.stinger;
+        let isLoadMirror = obj.isLoadMirror;
+        let node;
+        if (config.icon === "coin") {
+            node = cc.instantiate(await Res.getPrefab("obj/coin"));
+        } else {
+            // node = toy.pools.get("mo_dropItem");
+            // let iconNode = cc.find("icon", node);
+            // iconNode.getComponent(
+            //     cc.Sprite
+            // ).spriteFrame = cc.Canvas.instance.pictures.get(config.icon);
+        }
+
+        // let bgNode = cc.find("bg", node);
+        // if (num && currentPos) {
+        //     bgNode.active = true;
+        //     let sub = bgNode.children[0];
+
+        //     sub.getComponent(cc.Label).string =
+        //         num > 1 ? `${config.sname}(${num}个)` : `${config.sname}`;
+        //     sub.color = toy.CONST.propColor[config.quality.toUpperCase()];
+        // } else {
+        //     bgNode.active = false;
+        // }
+        node.parent = this.gameObj;
+        node.active = true;
+        if (!currentPos || isLoadMirror) {
+            node.setPosition(pos);
+        } else {
+            // node.setPosition(currentPos);
+            // toy.com("JumpToPos", { node, pos, currentPos });
+        }
+
+
+    }
 
     public tilePos2PixelPos(raw, col) {
         let pixelPos = this.floorLayer.getPositionAt(raw, col);
