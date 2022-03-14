@@ -1,4 +1,5 @@
 import GameMain from "../GameMain";
+import AnimatorSpine from "../tool/animator/AnimatorSpine";
 
 const { ccclass, property, menu } = cc._decorator;
 
@@ -10,6 +11,16 @@ export default class Mob extends cc.Component {
     private runDir = 1;
     private runSpeed = 40;
     private runGrid = 0;
+
+    @property(sp.Skeleton) SpineBoy: sp.Skeleton = null;
+    private _animatorMain: AnimatorSpine = null;
+
+    onLoad() {
+        this._animatorMain = this.SpineBoy.getComponent(AnimatorSpine);
+        this._animatorMain.onInit((fromState: string, toState: string) => {
+            cc.log(`state change: ${fromState} -> ${toState}`);
+        });
+    }
 
     start() {
         this.run();
@@ -35,6 +46,7 @@ export default class Mob extends cc.Component {
     }
 
     private run() {
+        this._animatorMain.autoTrigger("move");
         this.runDir = -this.runDir;
         this.node.scaleX = this.runDir * Math.abs(this.node.scaleX);
         let rb = this.node.getComponent(cc.RigidBody);

@@ -24,9 +24,6 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 5
-      },
-      {
         "__id__": 6
       },
       {
@@ -37,10 +34,13 @@
       },
       {
         "__id__": 9
+      },
+      {
+        "__id__": 10
       }
     ],
     "_prefab": {
-      "__id__": 10
+      "__id__": 11
     },
     "_opacity": 255,
     "_color": {
@@ -101,10 +101,13 @@
     "_components": [
       {
         "__id__": 3
+      },
+      {
+        "__id__": 4
       }
     ],
     "_prefab": {
-      "__id__": 4
+      "__id__": 5
     },
     "_opacity": 255,
     "_color": {
@@ -168,7 +171,7 @@
     ],
     "paused": false,
     "defaultSkin": "default",
-    "defaultAnimation": "move",
+    "defaultAnimation": "idle",
     "_preCacheMode": 0,
     "_cacheMode": 0,
     "loop": true,
@@ -179,7 +182,7 @@
     "_frameCache": null,
     "_curFrame": null,
     "_skeletonCache": null,
-    "_animationName": "move",
+    "_animationName": "idle",
     "_animationQueue": [],
     "_headAniInfo": null,
     "_playTimes": 0,
@@ -193,6 +196,21 @@
     "_N$debugMesh": false,
     "_N$useTint": false,
     "_N$enableBatch": false,
+    "_id": ""
+  },
+  {
+    "__type__": "81397AkbwFD5Izg7F0yY1/D",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 2
+    },
+    "_enabled": true,
+    "AssetRawUrl": {
+      "__uuid__": "7d432440-1580-4418-8b13-0c972e2c68a2"
+    },
+    "PlayOnStart": true,
+    "AutoUpdate": true,
     "_id": ""
   },
   {
@@ -293,6 +311,9 @@
       "__id__": 1
     },
     "_enabled": true,
+    "SpineBoy": {
+      "__id__": 3
+    },
     "_id": ""
   },
   {
