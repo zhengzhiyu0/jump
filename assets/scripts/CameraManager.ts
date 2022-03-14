@@ -3,24 +3,22 @@ const { ccclass, property } = cc._decorator;
 @ccclass
 export default class CameraManager extends cc.Component {
 
-    @property(cc.Node)
     target: cc.Node = null;
-
-    @property(cc.Node)
-    map: cc.Node = null;
 
     private max_x = 1334;
 
     // onLoad () {}
 
     start() {
-  
+
     }
 
-    initCamera(mapNode:cc.Node){
+    initCamera(mapNode: cc.Node, target: cc.Node) {
         var mainWidth = cc.find("Canvas").width;
         var mapWidth = mapNode.width;
         this.max_x = mapWidth - mainWidth;
+
+        this.target = target;
     }
 
     update(dt) {

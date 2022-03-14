@@ -52,7 +52,7 @@ export default class MapManager extends cc.Component {
         console.log(mapRealHeight)
         bgNode.width = mapRealWidth;
         // bgNode.height = mapRealHeight;
-        bgNode.scaleY = mapRealHeight /  bgNode.height;
+        bgNode.scaleY = mapRealHeight / bgNode.height;
 
         this.setFloor(tiledMap, tiledSize);
         this.setItems(tiledMap);
@@ -113,21 +113,23 @@ export default class MapManager extends cc.Component {
                         let location = this.gameObj.convertToNodeSpaceAR(worldPos);
                         // console.log("location",location)
 
-                        Res.getPrefab("items/mo_" + prefabName).then(res => {
-                            let node = cc.instantiate(res);
-                            this.gameObj.addChild(node);
-                            node.setPosition(location);
+                        if (properties.kind === "dy_wall") {
+                            Res.getPrefab("items/mo_" + prefabName).then(res => {
+                                let node = cc.instantiate(res);
+                                this.gameObj.addChild(node);
+                                node.setPosition(location);
 
-                            if (properties.kind === "Food") {
+                                if (properties.kind === "Food") {
 
-                            } else if (properties.kind === "dy_wall") {
-                                let type = properties.type;
-                                if (type && node) {
-                                    node.getChildByName(type + "").active = true;
-                                    node["type"] = type;
+                                } else if (properties.kind === "dy_wall") {
+                                    let type = properties.type;
+                                    if (type && node) {
+                                        node.getChildByName(type + "").active = true;
+                                        node["type"] = type;
+                                    }
                                 }
-                            }
-                        })
+                            })
+                        }
                     }
                 }
             }
@@ -137,12 +139,45 @@ export default class MapManager extends cc.Component {
     }
 
 
-    private tilePos2PixelPos(raw, col) {
+    public tilePos2PixelPos(raw, col) {
         let pixelPos = this.floorLayer.getPositionAt(raw, col);
 
         let p2 = this.mapNode.convertToWorldSpaceAR(pixelPos);
 
         return p2;
+    }
+
+    public getMapObjectInfo(mapNode: cc.Node, layoutName: string, objType: string, objName: string) {
+        let mapInfo = mapNode.getComponent(cc.TiledMap);
+        let objInfo = mapInfo.getObjectGroup(layoutName);
+        if (!objInfo) {
+            return null;
+        }
+        let objPoints = objInfo.getObjects();
+
+        if (objType && objName) {
+            let res = objPoints.filter(o => {
+                return o[objType] === objName;
+            })
+
+            return res.length ? res : null;
+        } else {
+            return objPoints;
+        }
+    }
+
+    public getOneMapObjectInfo(mapNode: cc.Node, layoutName: string, objType: string, objName: string) {
+        let res = this.getMapObjectInfo(mapNode, layoutName, objType, objName);
+        return (res && res.length) ? res[0] : null;
+    }
+
+    public getPosInMapObject(localPoint) {
+        let localPointOffset = localPoint.offset;
+        let canvas = cc.find("Canvas");
+        return cc.v2(
+            (-canvas.position.x) + localPointOffset.x * this.mapNode.scaleX,//瓦片地图160（32）
+            canvas.position.y - localPointOffset.y * this.mapNode.scaleY//瓦片地图160（32）
+        );
     }
 
     // update (dt) {}
