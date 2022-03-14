@@ -381,21 +381,6 @@
     "_id": ""
   },
   {
-    "__type__": "97568LbEZxApJCLW1bSXzsc",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 1
-    },
-    "_enabled": true,
-    "SpineBoy": {
-      "__id__": 3
-    },
-    "speed": 200,
-    "jumpHeight": 1000,
-    "_id": ""
-  },
-  {
     "__type__": "cc.PhysicsCircleCollider",
     "_name": "",
     "_objFlags": 0,
@@ -441,6 +426,21 @@
       "width": 19,
       "height": 69.1
     },
+    "_id": ""
+  },
+  {
+    "__type__": "a71d2zNv61Ea6FsZYFS9shS",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "SpineBoy": {
+      "__id__": 3
+    },
+    "speed": 200,
+    "jumpHeight": 990,
     "_id": ""
   },
   {

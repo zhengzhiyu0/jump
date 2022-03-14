@@ -52,7 +52,7 @@ export default class MapManager extends cc.Component {
         let mapRealHeight = mapNode.scaleY * mapNode.height;
         bgNode.getComponent(cc.Sprite).type = cc.Sprite.Type.TILED;
         console.log(mapRealHeight)
-        bgNode.width = mapRealWidth;
+        bgNode.width = mapNode.width / 2;
         // bgNode.height = mapRealHeight;
         bgNode.scaleY = mapRealHeight / bgNode.height;
 

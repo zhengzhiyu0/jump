@@ -1,6 +1,7 @@
-const { ccclass, property } = cc._decorator;
+const { ccclass, property, menu } = cc._decorator;
 
 @ccclass
+@menu("component/Prop")
 export default class Prop extends cc.Component {
     private config = null;
 
@@ -13,8 +14,8 @@ export default class Prop extends cc.Component {
     }
 
     animation() {
-        cc.tween(this.node).to(0.25, {
-            y: this.node.y + 20,
+        cc.tween(this.node).to(0.35, {
+            y: this.node.y + 50,
             scale: 1.5
         }).to(0.1, {
             opacity: 0

@@ -1,10 +1,11 @@
-import AnimatorSpine from "./tool/animator/AnimatorSpine";
-import InputHelp from "./tool/InputHelp";
+import AnimatorSpine from "../tool/animator/AnimatorSpine";
+import InputHelp from "../tool/InputHelp";
 
-const { ccclass, property } = cc._decorator;
+const { ccclass, property, menu } = cc._decorator;
 const Input = InputHelp.instance;
 
 @ccclass
+@menu("component/Hero")
 export default class Hero extends cc.Component {
     @property(sp.Skeleton) SpineBoy: sp.Skeleton = null;
     private _animatorMain: AnimatorSpine = null;
