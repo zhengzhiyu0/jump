@@ -51,7 +51,6 @@ export default class MapManager extends cc.Component {
         let mapRealWidth = mapNode.scaleX * mapNode.width;
         let mapRealHeight = mapNode.scaleY * mapNode.height;
         bgNode.getComponent(cc.Sprite).type = cc.Sprite.Type.TILED;
-        console.log(mapRealHeight)
         bgNode.width = mapNode.width / 2;
         // bgNode.height = mapRealHeight;
         bgNode.scaleY = mapRealHeight / bgNode.height;
@@ -59,6 +58,7 @@ export default class MapManager extends cc.Component {
         this.setFloor(tiledMap, tiledSize);
         this.setItems(tiledMap);
         this.setCoin();
+        this.setMob();
 
         return mapNode;
     }
@@ -191,6 +191,18 @@ export default class MapManager extends cc.Component {
                     }
                     break;
             }
+        })
+    }
+
+    private setMob() {
+        const objs = this.getMapObjectInfo(this.mapNode, "born", "kind", "mob");
+        objs.forEach(point => {
+            const pos = this.getPosInMapObject(point);
+            Res.getPrefab("mob/" + point.mob).then(res => {
+                let mob = cc.instantiate(res);
+                mob.parent = this.gameObj;
+                mob.setPosition(pos);
+            })
         })
     }
 

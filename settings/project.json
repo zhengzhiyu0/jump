@@ -4,7 +4,8 @@
     "hero_foot",
     "floor",
     "hero_body",
-    "prop"
+    "prop",
+    "mob_foot"
   ],
   "collision-matrix": [
     [
@@ -18,7 +19,10 @@
     [
       false,
       true,
-      false
+      false,
+      null,
+      null,
+      true
     ],
     [
       false,
@@ -32,6 +36,14 @@
       false,
       false,
       true,
+      false
+    ],
+    [
+      false,
+      false,
+      true,
+      false,
+      false,
       false
     ]
   ],

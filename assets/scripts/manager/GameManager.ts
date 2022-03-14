@@ -28,6 +28,7 @@ export default class GameManager extends cc.Component {
         let pos = GameMain._mapManager.getPosInMapObject(curPointInfo);
         let heroPrefab = await ResHelp.instance.getPrefab("hero/m_hero1")
         let hero = cc.instantiate(heroPrefab);
+        hero.scale = 0.8;
         GameMain.root.addChild(hero);
         hero.position = cc.v3(pos);
 

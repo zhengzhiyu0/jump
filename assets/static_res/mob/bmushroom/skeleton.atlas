@@ -1,0 +1,160 @@
+
+skeleton.png
+size: 37,525
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Big_Mushroom_attack_01
+  rotate: true
+  xy: 2, 499
+  size: 24, 31
+  orig: 24, 31
+  offset: 0, 0
+  index: -1
+Big_Mushroom_death_01
+  rotate: true
+  xy: 2, 499
+  size: 24, 31
+  orig: 24, 31
+  offset: 0, 0
+  index: -1
+Big_Mushroom_hurt_01
+  rotate: true
+  xy: 2, 499
+  size: 24, 31
+  orig: 24, 31
+  offset: 0, 0
+  index: -1
+Big_Mushroom_idle_01
+  rotate: true
+  xy: 2, 499
+  size: 24, 31
+  orig: 24, 31
+  offset: 0, 0
+  index: -1
+Big_Mushroom_attack_02
+  rotate: true
+  xy: 2, 264
+  size: 25, 31
+  orig: 25, 31
+  offset: 0, 0
+  index: -1
+Big_Mushroom_attack_03
+  rotate: true
+  xy: 2, 2
+  size: 35, 31
+  orig: 35, 31
+  offset: 0, 0
+  index: -1
+Big_Mushroom_attack_04
+  rotate: false
+  xy: 2, 39
+  size: 31, 31
+  orig: 31, 31
+  offset: 0, 0
+  index: -1
+Big_Mushroom_death_02
+  rotate: true
+  xy: 2, 128
+  size: 26, 33
+  orig: 26, 33
+  offset: 0, 0
+  index: -1
+Big_Mushroom_death_03
+  rotate: true
+  xy: 2, 473
+  size: 24, 31
+  orig: 24, 31
+  offset: 0, 0
+  index: -1
+Big_Mushroom_death_04
+  rotate: true
+  xy: 2, 447
+  size: 24, 28
+  orig: 24, 28
+  offset: 0, 0
+  index: -1
+Big_Mushroom_hurt_02
+  rotate: true
+  xy: 2, 100
+  size: 26, 33
+  orig: 26, 33
+  offset: 0, 0
+  index: -1
+Big_Mushroom_hurt_03
+  rotate: true
+  xy: 2, 237
+  size: 25, 33
+  orig: 25, 33
+  offset: 0, 0
+  index: -1
+Big_Mushroom_hurt_04
+  rotate: true
+  xy: 2, 421
+  size: 24, 32
+  orig: 24, 32
+  offset: 0, 0
+  index: -1
+Big_Mushroom_idle_02
+  rotate: true
+  xy: 2, 210
+  size: 25, 32
+  orig: 25, 32
+  offset: 0, 0
+  index: -1
+Big_Mushroom_idle_03
+  rotate: true
+  xy: 2, 183
+  size: 25, 32
+  orig: 25, 32
+  offset: 0, 0
+  index: -1
+Big_Mushroom_idle_04
+  rotate: true
+  xy: 2, 156
+  size: 25, 31
+  orig: 25, 31
+  offset: 0, 0
+  index: -1
+Big_Mushroom_walk_01
+  rotate: true
+  xy: 2, 395
+  size: 24, 31
+  orig: 24, 31
+  offset: 0, 0
+  index: -1
+Big_Mushroom_walk_02
+  rotate: true
+  xy: 2, 369
+  size: 24, 32
+  orig: 24, 32
+  offset: 0, 0
+  index: -1
+Big_Mushroom_walk_03
+  rotate: true
+  xy: 2, 343
+  size: 24, 33
+  orig: 24, 33
+  offset: 0, 0
+  index: -1
+Big_Mushroom_walk_04
+  rotate: true
+  xy: 2, 317
+  size: 24, 31
+  orig: 24, 31
+  offset: 0, 0
+  index: -1
+Big_Mushroom_walk_05
+  rotate: true
+  xy: 2, 291
+  size: 24, 32
+  orig: 24, 32
+  offset: 0, 0
+  index: -1
+Big_Mushroom_walk_06
+  rotate: true
+  xy: 2, 72
+  size: 26, 33
+  orig: 26, 33
+  offset: 0, 0
+  index: -1
